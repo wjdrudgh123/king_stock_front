@@ -84,7 +84,7 @@ const App = () => {
                 onKeyPress={onKeyPress}
                 value={input}
               />
-              <a onClick={handleSearchBtn}>
+              <a href="#" onClick={handleSearchBtn}>
                 <i className="fas fa-search"></i>
               </a>
             </div>
