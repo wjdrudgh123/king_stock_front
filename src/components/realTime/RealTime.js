@@ -11,7 +11,6 @@ const RealTime = () => {
     } = await axios.get(`https://${process.env.REACT_APP_IP}/data/realtime`);
     setRealTime(realtime);
   };
-  useEffect(communicate, []);
   return (
     <div className="real_search">
       {realTime.naver === undefined ? (
