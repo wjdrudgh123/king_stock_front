@@ -15,9 +15,9 @@ const Company = ({
 }) => {
   let flag = 0; // 0 - 고가 > 종가 > 저가 , -1 저가 > 종가 , 1 고가 < 종가, 2 저가 = 종가 3 고가 = 종가
   let color = "red";
-  const tmpHigh = Number(highPrice.replace(/\,/g, ""));
-  const tmpLow = Number(lowPrice.replace(/\,/g, ""));
-  const tmpNow = Number(nowPrice.replace(/\,/g, ""));
+  const tmpHigh = Number(highPrice.replace(/,/g, ""));
+  const tmpLow = Number(lowPrice.replace(/,/g, ""));
+  const tmpNow = Number(nowPrice.replace(/,/g, ""));
   if (tmpHigh > tmpNow && tmpNow > tmpLow) {
     flag = 0;
   } else if (tmpLow > tmpNow) {
