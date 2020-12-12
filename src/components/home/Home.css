@@ -1,0 +1,74 @@
+main {
+  height: 100%;
+}
+
+.inner-width {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 30px;
+  height: 100%;
+}
+
+/* 검색 후 */
+
+.searching-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 124px;
+  position: fixed;
+  z-index: 2;
+}
+
+.searching-bar__select {
+  flex: 1;
+  height: 27px;
+  font-size: 17px;
+}
+
+.searching-bar__input {
+  flex: 2;
+  height: 27px;
+  font-size: 17px;
+}
+
+.searching-bar a {
+  position: absolute;
+  right: 15px;
+}
+
+.layer-popup {
+  position: absolute;
+  top: 93px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 4;
+  background-color: #dfe6e9;
+  height: 800px;
+  overflow: auto;
+}
+
+.popup__result {
+  width: 100%;
+  padding: 0 30px;
+  margin-top: 42px;
+}
+
+.popup__btn--close {
+  position: absolute;
+  top: 6px;
+  right: 20px;
+  font-size: 32px;
+  z-index: 5;
+}
+
+.real-time {
+  margin-top: 268px;
+  position: relative;
+}
+
+.display-none {
+  display: none;
+}

@@ -1,0 +1,357 @@
+.search-company {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 136px;
+  border: 1px solid black;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.search-company h3 {
+  padding-left: 12px;
+  width: 50%;
+}
+
+.search-company__chart {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.price {
+  position: relative;
+  left: 16px;
+  margin: 12px 0;
+}
+
+.price::before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 8px;
+  width: 12px;
+  height: 2px;
+}
+
+.chart__high-price::after {
+  content: "";
+  position: absolute;
+  left: 65px;
+  top: 0px;
+  width: 2px;
+  height: 50px;
+  background-color: black;
+}
+
+.chart__low-price::after {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: -18px;
+  width: 12px;
+  height: 28px;
+  background-color: black;
+}
+/*
+0 - 고가 > 종가 > 저가 , -1 저가 > 종가 , 1 고가 < 종가, 2 저가 = 종가 3 고가 = 종가
+*/
+.price0 {
+  position: absolute;
+  right: 140px;
+  top: 26px;
+}
+
+.price0::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 8px;
+  width: 14px;
+  height: 2px;
+  background-color: black;
+}
+
+.price0::after {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 4px;
+  width: 8px;
+  height: 2px;
+  background-color: black;
+  transform: rotate(-45deg);
+}
+
+.price-1 {
+  position: absolute;
+  right: 140px;
+  top: 50px;
+}
+
+.price-1::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 8px;
+  width: 14px;
+  height: 2px;
+  background-color: black;
+}
+
+.price-1::after {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 4px;
+  width: 8px;
+  height: 2px;
+  background-color: black;
+  transform: rotate(-45deg);
+}
+
+.price1 {
+  position: absolute;
+  right: 140px;
+  top: 2px;
+}
+
+.price1::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 8px;
+  width: 14px;
+  height: 2px;
+  background-color: black;
+}
+
+.price1::after {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 4px;
+  width: 8px;
+  height: 2px;
+  background-color: black;
+  transform: rotate(-45deg);
+}
+
+.price2 {
+  position: absolute;
+  right: 140px;
+  top: 42px;
+}
+
+.price2::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 8px;
+  width: 14px;
+  height: 2px;
+  background-color: black;
+}
+
+.price2::after {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 4px;
+  width: 8px;
+  height: 2px;
+  background-color: black;
+  transform: rotate(-45deg);
+}
+
+.price3 {
+  position: absolute;
+  right: 140px;
+  top: 14px;
+}
+
+.price3::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 8px;
+  width: 14px;
+  height: 2px;
+  background-color: black;
+}
+
+.price3::after {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 4px;
+  width: 8px;
+  height: 2px;
+  background-color: black;
+  transform: rotate(-45deg);
+}
+
+.red::after {
+  background-color: red;
+}
+
+.blue::after {
+  background-color: blue;
+}
+
+@media screen and (max-width: 980px) {
+  .search-company h3 {
+    width: 45%;
+    position: relative;
+    top: -48px;
+  }
+
+  .search-company ul {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .search-company__chart {
+    width: 60%;
+    justify-content: flex-start;
+  }
+
+  .price0 {
+    position: absolute;
+    right: 15px;
+    top: 26px;
+  }
+
+  .price0::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 8px;
+    width: 14px;
+    height: 2px;
+    background-color: black;
+  }
+
+  .price0::after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 4px;
+    width: 8px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(-45deg);
+  }
+
+  .price-1 {
+    position: absolute;
+    right: 15px;
+    top: 50px;
+  }
+
+  .price-1::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 8px;
+    width: 14px;
+    height: 2px;
+    background-color: black;
+  }
+
+  .price-1::after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 4px;
+    width: 8px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(-45deg);
+  }
+
+  .price1 {
+    position: absolute;
+    right: 15px;
+    top: 2px;
+  }
+
+  .price1::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 8px;
+    width: 14px;
+    height: 2px;
+    background-color: black;
+  }
+
+  .price1::after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 4px;
+    width: 8px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(-45deg);
+  }
+
+  .price2 {
+    position: absolute;
+    right: 15px;
+    top: 42px;
+  }
+
+  .price2::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 8px;
+    width: 14px;
+    height: 2px;
+    background-color: black;
+  }
+
+  .price2::after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 4px;
+    width: 8px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(-45deg);
+  }
+
+  .price3 {
+    position: absolute;
+    right: 15px;
+    top: 14px;
+  }
+
+  .price3::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 8px;
+    width: 14px;
+    height: 2px;
+    background-color: black;
+  }
+
+  .price3::after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 4px;
+    width: 8px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(-45deg);
+  }
+}
