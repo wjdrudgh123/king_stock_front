@@ -31,7 +31,7 @@ const App = () => {
   const handleSearchBtn = async () => {
     //const { data } = await axios.post("http://localhost:4000/data/search", {
     const { data } = await axios.post(
-      `https://${process.env.REACT_APP_IP}/data/search`,
+      `https://${process.env.REACT_APP_IP}/search`,
       {
         value: input,
       }

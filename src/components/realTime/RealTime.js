@@ -8,7 +8,7 @@ const RealTime = () => {
     const {
       data: { realtime },
       //} = await axios.get(`http://localhost:4000/data/realtime`);
-    } = await axios.get(`https://${process.env.REACT_APP_IP}/data/realtime`);
+    } = await axios.get(`https://${process.env.REACT_APP_IP}/realtime`);
     setRealTime(realtime);
   };
   useEffect(() => {
