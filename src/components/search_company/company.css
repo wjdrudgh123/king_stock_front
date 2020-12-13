@@ -8,6 +8,10 @@
   position: relative;
 }
 
+.search-company:last-child {
+  margin-bottom: 45px;
+}
+
 .search-company h3 {
   padding-left: 12px;
   width: 50%;

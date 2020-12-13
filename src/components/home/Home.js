@@ -29,6 +29,7 @@ const App = () => {
   };
 
   const handleSearchBtn = async () => {
+    setIsLoading(true);
     //const { data } = await axios.post("http://localhost:4000/data/search", {
     const { data } = await axios.post(
       `https://${process.env.REACT_APP_IP}/data/search`,
@@ -71,26 +72,38 @@ const App = () => {
       ) : (
         <main>
           <div className="inner-width">
-            <div className="searching-bar">
-              <select className="searching-bar__select">
-                <option id="catalyst">재료</option>
-                <option id="company">기업</option>
-              </select>
-              <input
-                type="text"
-                className="searching-bar__input"
-                placeholder="검색어"
-                onChange={onChange}
-                onKeyPress={onKeyPress}
-                value={input}
-              />
-              <span className="searching-btn" onClick={handleSearchBtn}>
-                <i className="fas fa-search"></i>
-              </span>
-            </div>
-            <div className="real-time">
-              <RealTime />
-            </div>
+            {isLoading ? (
+              <div className="loading-box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            ) : (
+              <>
+                <div className="searching-bar">
+                  <select className="searching-bar__select">
+                    <option id="catalyst">재료</option>
+                    <option id="company">기업</option>
+                  </select>
+                  <input
+                    type="text"
+                    className="searching-bar__input"
+                    placeholder="검색어"
+                    onChange={onChange}
+                    onKeyPress={onKeyPress}
+                    value={input}
+                  />
+                  <span className="searching-btn" onClick={handleSearchBtn}>
+                    <i className="fas fa-search"></i>
+                  </span>
+                </div>
+                <div className="real-time">
+                  <RealTime />
+                </div>
+              </>
+            )}
           </div>
           {isSearching ? (
             <div className="layer-popup">
