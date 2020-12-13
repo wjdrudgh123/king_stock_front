@@ -82,7 +82,7 @@ const App = () => {
               </div>
             ) : (
               <>
-                <div className="searching-bar">
+                {/* <div className="searching-bar">
                   <select className="searching-bar__select">
                     <option id="catalyst">재료</option>
                     <option id="company">기업</option>
@@ -98,7 +98,7 @@ const App = () => {
                   <span className="searching-btn" onClick={handleSearchBtn}>
                     <i className="fas fa-search"></i>
                   </span>
-                </div>
+                </div> */}
                 <div className="real-time">
                   <RealTime />
                 </div>
